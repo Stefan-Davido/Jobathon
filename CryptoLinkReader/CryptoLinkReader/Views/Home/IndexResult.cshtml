@@ -1,0 +1,75 @@
+﻿@model CryptoLinkModel
+
+<div class="row text-center">
+    <div class="col-12 bg-dark text-center">
+        <h2>Crypto article Reader</h2>
+    </div>
+</div>
+<div class="row text-center mt-5">
+    <form method="post">
+        <input id="urlString" type="url" />
+        <button onclick="GetUrlJS()" type="submit">Analyse</button>
+    </form>
+</div>
+<div class="row">
+    <table class="col-12">
+        <tr>
+            <td>
+                <p>Crypto</p>
+            </td>
+            <td>
+                    <p>Image</p>
+                </td>   
+            <td>
+                    <p>Status</p>
+                </td>
+            <td>
+                    <p>Link</p>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>@Html.DisplayFor(model => model.Title)</h2>
+            </td> 
+            <td>
+                @if (Model.Title == "Bitcoin")
+                {
+                    <img src="~/Images/download.jpg" />
+                }
+                else if (Model.Title == "DogeCoin".ToLower())
+                {
+                    <img src="~/Images/dogecoin.jpg" />
+                }
+                else if (Model.Title == "Etherium".ToLower())
+                {
+                    <img src="~/Images/etherium).jpg" />
+                }
+                else if (Model.Title == "tether".ToLower())
+                {
+                    <img src="~/Images/tether.jpg" />
+                }
+                else if (Model.Title == "usdcoin".ToLower())
+                {
+                    <img src="~/Images/tether.jpg" />
+                }
+            </td> 
+            <td>
+                @if (Model.FallingCounter > Model.RaisingCounter)
+                {
+                    <h2>Its Falling</h2>
+                }
+                else if (Model.RaisingCounter > 0)
+                {
+                    <h2>Its RAISING !!!!</h2>
+                }
+                else
+                {
+                    <h2>none</h2>
+                }
+            </td> 
+            <td>
+                <img src="~/Images/@Model.URL" />
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\CtyptoLinkReaderServices.deps.json
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\CtyptoLinkReaderServices.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\CtyptoLinkReaderServices.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\CryptoLinkReaderRepository.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\CryptoLinkReaderRepository.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.AssemblyInfo.cs
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.csproj.CopyComplete
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CtyptoLinkReaderServices\obj\Debug\netcoreapp3.1\CtyptoLinkReaderServices.pdb

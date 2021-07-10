@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\CryptoLinkReaderRepository.deps.json
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\CryptoLinkReaderRepository.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\CryptoLinkReaderRepository.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\Data.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.AssemblyInfo.cs
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.csproj.CopyComplete
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.dll
+C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReaderRepository\obj\Debug\netcoreapp3.1\CryptoLinkReaderRepository.pdb

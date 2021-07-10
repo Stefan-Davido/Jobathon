@@ -1,0 +1,19 @@
+﻿@model CryptoLinkModel
+
+<div class="row text-center">
+    <div class="col-12 bg-dark text-center">
+        <h2>Crypto article Reader</h2>
+    </div>
+</div>
+<div class="row text-center mt-5">
+    <form method="post">
+        @*onclick="GetUrlJS()"*@@*onclick="GetUrlJS()"*@
+        <input  type="url" asp-for="@Model.URL" />
+        <input type="submit" value="Analyse" />
+    </form>
+</div>
+
+@section Scripts{
+    <script src="~/js/site.js"></script>
+}
+
