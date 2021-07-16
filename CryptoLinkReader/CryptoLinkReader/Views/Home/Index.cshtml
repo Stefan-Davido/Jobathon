@@ -1,19 +1,70 @@
 ﻿@model CryptoLinkModel
 
 <div class="row text-center">
-    <div class="col-12 bg-dark text-center">
+    <div class="col-12 bg-dark text-center p-5">
         <h2>Crypto article Reader</h2>
     </div>
 </div>
 <div class="row text-center mt-5">
     <form method="post">
-        @*onclick="GetUrlJS()"*@@*onclick="GetUrlJS()"*@
         <input  type="url" asp-for="@Model.URL" />
         <input type="submit" value="Analyse" />
     </form>
 </div>
-
-@section Scripts{
-    <script src="~/js/site.js"></script>
+@if (Model != null)
+{
+<div class="row">
+    <table class="col-12">
+        <thead class="thead-dark table-bordered">
+            <tr>
+                <th>
+                    Coin
+                </th>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Link
+                </th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <h2>@Html.DisplayFor(model => model.Title)</h2>
+            </td>
+            <td>
+                <img src="~/Images/@Model.img" />
+            </td>
+            <td>
+                @if (Model.FallingCounter > Model.RaisingCounter)
+                {
+                    <div class="row bg-danger">
+                        <h2>Negative</h2>
+                    </div>
+                }
+                else if (Model.RaisingCounter > 0)
+                {
+                    <div class="row bg-success">
+                        <h2>Positive</h2>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <h2>
+                            Even
+                        </h2>
+                    </div>
+                }
+            </td>
+            <td>
+                <p>@Model.URL</p>
+            </td>
+        </tr>
+    </table>
+</div>
 }
 

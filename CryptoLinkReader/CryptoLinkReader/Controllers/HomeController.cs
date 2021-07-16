@@ -16,15 +16,12 @@ using System.Web;
 namespace CryptoLinkReader.Controllers
 {
     public class HomeController : Controller
-    {
-       
-
+    {   
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Index(CryptoLinkModel cryptoModel)
@@ -33,26 +30,30 @@ namespace CryptoLinkReader.Controllers
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Add("User-Agent", "C# console program");
 
-            //var content = await client.GetStringAsync("http://webcode.me");
-
-             var content = await client.GetStringAsync(url);
+            var content = await client.GetStringAsync(url);
             string myEncodedString = HttpUtility.HtmlEncode(content.ToLower());        
-
+ 
             string[] splitcontent = content.Split("<");
-             string Bitcoin = "Bitcoin".ToLower();
-             string Tether = "Tether".ToLower();
-             string Etherium = "Etherium".ToLower();
-             string DogeCoin = "DogeCoin".ToLower();
-             string USDCoin = "USDCoin".ToLower();
+            string Bitcoin = "Bitcoin".ToLower();
+            string Tether = "Tether".ToLower();
+            string Ethereum = "Ethereum".ToLower();
+            string DogeCoin = "DogeCoin".ToLower();
+            string USDCoin = "USDCoin".ToLower();
 
-             var raising = "raising".ToLower();
+            var raising = "raising".ToLower();
             var falling = "falling".ToLower();
             var countrising = 0;
             var countfalling = 0;
 
+            int BitcoinCounter = 0;
+            int DogeCoinCounter = 0;
+            int EthereumCounter = 0;
+            int TetherCounter = 0;
+            int USDCoinCounter = 0;
+
             for (int i = 0; i < splitcontent.Length; i++)
             {
-                if (splitcontent[i].Contains(raising.ToLower()) && splitcontent[i].Contains(raising.ToLower()))
+                if (splitcontent[i].Contains(raising.ToLower()) && splitcontent[i].Contains(falling.ToLower()))
                 {
                     countrising++;
                     countfalling++;
@@ -69,139 +70,70 @@ namespace CryptoLinkReader.Controllers
                 cryptoModel.RaisingCounter = countrising;
                 cryptoModel.FallingCounter = countfalling;
 
-                if (splitcontent[i].Contains(Bitcoin.ToLower()))
+                if (splitcontent[i].ToLower().Contains(Bitcoin.ToLower()))
                 {
-                    cryptoModel.Title = Bitcoin;
-                    cryptoModel.img = "download.jpg";
+                    BitcoinCounter += 1;
                 }
-                if (splitcontent[i].Contains(Tether.ToLower()))
+                if (splitcontent[i].ToLower().Contains(Tether.ToLower()))
                 {
-                    cryptoModel.Title = Tether;
-                    cryptoModel.img = "tether.jpg";
+                    TetherCounter += 1;
                 }
-                if (splitcontent[i].Contains(Etherium.ToLower()))
+                if (splitcontent[i].ToLower().Contains(Ethereum.ToLower()))
                 {
-                    cryptoModel.Title = Etherium;
-                    cryptoModel.img = "etherium).jpg/";
+                    EthereumCounter += 1;
                 }
-                if (splitcontent[i].Contains(DogeCoin.ToLower()))
+                if (splitcontent[i].ToLower().Contains(DogeCoin.ToLower()))
                 {
-                    cryptoModel.Title = DogeCoin;
-                    cryptoModel.img = "dogecoin.jpg";
+                    DogeCoinCounter += 1;
                 }
-                if (splitcontent[i].Contains(USDCoin.ToLower()))
+                if (splitcontent[i].ToLower().Contains(USDCoin.ToLower()))
                 {
-                    cryptoModel.Title = USDCoin;
-                    cryptoModel.img = "usdCoin.jpg";
-                }
+                    USDCoinCounter += 1;
+                }                
             }
 
-            return RedirectToAction("IndexResult", "Home", cryptoModel);
-        }
+            if(BitcoinCounter > EthereumCounter &&
+                BitcoinCounter > DogeCoinCounter &&
+                BitcoinCounter > TetherCounter &&
+                BitcoinCounter > USDCoinCounter)
+            {
+                cryptoModel.Title = Bitcoin;
+                cryptoModel.img = "download.jpg";
+            }
+            else if(EthereumCounter > BitcoinCounter &&
+                EthereumCounter > DogeCoinCounter &&
+                EthereumCounter > TetherCounter &&
+                EthereumCounter > USDCoinCounter)
+            {
+                cryptoModel.Title = Ethereum;
+                cryptoModel.img = "etherium).jpg";
+            } 
+            else if(DogeCoinCounter > BitcoinCounter &&
+                DogeCoinCounter > EthereumCounter &&
+                DogeCoinCounter > TetherCounter &&
+                DogeCoinCounter > USDCoinCounter)
+            {
+                cryptoModel.Title = DogeCoin;
+                cryptoModel.img = "dogecoin.jpg";
+            }
+            else if(TetherCounter > BitcoinCounter &&
+                TetherCounter > DogeCoinCounter &&
+                TetherCounter > EthereumCounter &&
+                TetherCounter > USDCoinCounter)
+            {
+                cryptoModel.Title = Tether;
+                cryptoModel.img = "tether.jpg";
+            }
+            else if(USDCoinCounter > BitcoinCounter &&
+                USDCoinCounter > DogeCoinCounter &&
+                USDCoinCounter > TetherCounter &&
+                USDCoinCounter > EthereumCounter)
+            {
+                cryptoModel.Title = USDCoin;
+                cryptoModel.img = "usdCoin.jpg";
+            }
 
-        public IActionResult IndexResult(CryptoLinkModel cryptoModel)
-        {
             return View(cryptoModel);
-        }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-        //[HttpGet]
-        //public async Task<IActionResult> Index()
-        //{
-        //    string raising = "raising";
-        //    string falling = "falling";
-        //    int raisingCounter = 0;
-        //    int fallingCounter = 0;
-
-        //    string meta = "meta";
-        //    int metaCounter = 0;
-
-        //    using var client = new HttpClient();
-        //    client.DefaultRequestHeaders.Add("User-Agent", "C# console program");
-
-        //    var content = await client.GetStringAsync("https://stackoverflow.com/questions/1048199/easiest-way-to-read-from-a-url-into-a-string-in-net");
-        //    var content = await client.GetStringAsync("");
-        //    //var content = await client.GetStringAsync(urlString);
-
-        //    string myEncodedString = HttpUtility.HtmlEncode(content.ToLower());
-
-        //    for (int i = 0; i < content.Length; i++)
-        //    {
-        //        if (content.Contains(raising))
-        //        {
-        //            raisingCounter++;
-        //        }
-        //        else if (content.Contains(falling))
-        //        {
-        //            fallingCounter++;
-        //        }
-        //    }
-
-
-        //    CryptoLinkModel cryptoModel = new CryptoLinkModel();
-        //    cryptoModel.RaisingCounter = raisingCounter;
-        //    cryptoModel.FallingCounter = fallingCounter;
-
-        //    return View(cryptoModel);
-        //}
-
-        //[HttpPost]
-        //public async Task<IActionResult> IndexResult(string urlString)
-        //{
-        //    string raising = "raising";
-        //    string falling = "falling";
-        //    int raisingCounter = 0;
-        //    int fallingCounter = 0;
-
-        //    string meta = "meta";
-        //    int metaCounter = 0;
-
-        //    using var client = new HttpClient();
-        //    client.DefaultRequestHeaders.Add("User-Agent", "C# console program");
-
-        //    //var content = await client.GetStringAsync("http://webcode.me");
-        //    var content = await client.GetStringAsync(urlString);
-
-        //    string myEncodedString = HttpUtility.HtmlEncode(content.ToLower());
-
-        //    for(int i = 0; i < content.Length; i++)
-        //    {
-        //        if (content.Contains(raising)
-        //        {
-        //            raisingCounter++;
-        //        }
-        //        else if (content.Contains(falling))
-        //        {
-        //            fallingCounter++;
-        //        }
-        //    }
-        //    //}for (int i = 0; i < content.Length; i++)
-        //    //{
-        //    //    if (content[i] == raising)
-        //    //    {
-        //    //        raisingCounter++;
-        //    //    }
-        //    //    else if (content[i] == falling)
-        //    //    {
-        //    //        fallingCounter++;
-        //    //    }
-        //    //}
-
-        //    CryptoLinkModel cryptoModel = new CryptoLinkModel();
-        //    cryptoModel.RaisingCounter = raisingCounter;
-        //    cryptoModel.FallingCounter = fallingCounter;
-
-        //    return View(cryptoModel);
-        //}
-
-       
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        }     
     }
 }

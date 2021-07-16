@@ -93,5 +93,3 @@ C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreap
 C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreapp3.1\CryptoLinkReader.dll
 C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreapp3.1\CryptoLinkReader.pdb
 C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreapp3.1\CryptoLinkReader.genruntimeconfig.cache
-C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexResult.cshtml.g.cs
-C:\Users\Dell\source\repos\CryptoLinkReader\CryptoLinkReader\obj\Debug\netcoreapp3.1\CryptoLinkReader.csprojAssemblyReference.cache
